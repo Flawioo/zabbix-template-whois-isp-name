@@ -22,7 +22,7 @@ put script into external-scripts path
 
 What script?
 This:
-```
+```shell
 #!/bin/bash
 # Desc: Get ISP name
 #           
