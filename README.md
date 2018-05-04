@@ -18,19 +18,23 @@ Is common to get problem like this for a expecific ADSL provider.
 
 # How to
 **First**\
-put script into external-scripts path
+
+Check if whois is installed on your system.
+
+put the above script into external-scripts path
 
 What script?
+
 This:
 ```shell
 #!/bin/bash
 # Desc: Get ISP name
 #           
 ip="$1"                                                                          # First parameter
-[ -z "${ip}" ] && echo "Primeiro parametro \$1 vazio"                            # Tests if this parameter whas provided to script
+[ -z "${ip}" ] && echo "First parameter \$1 empty"                               # Tests if this parameter whas provided to script
 whois=$(which whois)                                                             # Locate whois path
-[ "${whois}x" = "x" ] && echo "Whois nao esta instalado, favor instalar"         # Check if whois is instaled
-$whois $ip | grep -i "owner:\|OrgName" | while read lixo C2 ; do echo $C2 ; done # Finaly get the result
+[ "${whois}x" = "x" ] && echo "Whois is not installed, please install"           # Check if whois is instaled
+$whois $ip | grep -i "owner:\|OrgName" | while read C1 C2 ; do echo $C2 ; done   # Finaly get the result
 ```
 
 how to know where is this path?
@@ -42,5 +46,6 @@ ExternalScripts=${datadir}/zabbix/externalscripts
 import into zabbix-server
 
 **Second**
-import template
+import template file, link below
+https://github.com/Flawioo/zabbix-template-whois-isp-name/blob/master/template-zbx_whois-get-isp-name.xml
 
