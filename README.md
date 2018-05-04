@@ -17,7 +17,7 @@ Sometimes a group of hosts stop working without any aparent problem.
 Is common to get problem like this for a expecific ADSL provider.
 
 # How to
-**First**\
+**First**
 
 Check if whois is installed on your system.
 
