@@ -39,11 +39,13 @@ $whois $ip | grep -i "owner:\|OrgName" | while read C1 C2 ; do echo $C2 ; done  
 
 how to know where is this path?
 
-cd /etc/zabbix/
-grep externalscripts zabbix_server.conf
-ExternalScripts=${datadir}/zabbix/externalscripts
-
-import into zabbix-server
+```shell
+root@zabbix-server:~# cd /etc/zabbix/
+root@zabbix-server:/etc/zabbix# grep externalscripts zabbix_server.conf
+# ExternalScripts=${datadir}/zabbix/externalscripts
+root@zabbix-server:/etc/zabbix# cd /etc/zabbix/externalscripts
+```
+import template into zabbix-server via zabbix web interface
 
 **Second**
 
