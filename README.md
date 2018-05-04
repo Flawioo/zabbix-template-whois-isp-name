@@ -46,6 +46,8 @@ ExternalScripts=${datadir}/zabbix/externalscripts
 import into zabbix-server
 
 **Second**
-import template file, link below
+
+Import template file, link below:
+
 https://github.com/Flawioo/zabbix-template-whois-isp-name/blob/master/template-zbx_whois-get-isp-name.xml
 
